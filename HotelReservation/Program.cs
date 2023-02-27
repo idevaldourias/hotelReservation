@@ -37,6 +37,12 @@ namespace HotelReservation
             } catch (DomainException ex)
             {
                 Console.WriteLine("Error in reservation: " + ex.Message);
+            } catch (FormatException ex)
+            {
+                Console.WriteLine("Format error: " + ex.Message);
+            } catch (Exception ex)
+            {
+                Console.WriteLine("Unexpected error: " + ex.Message);
             }
         }
     }
